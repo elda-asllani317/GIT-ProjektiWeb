@@ -45,5 +45,8 @@ body {
 .demo-section .demo-button::after {
     content: "→";
     margin-left: 10px;
+      font-size: 1rem;
+    font-weight: bold;
+  }
   
   
