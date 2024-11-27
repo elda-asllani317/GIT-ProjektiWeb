@@ -28,4 +28,7 @@ body {
 .free-plan {
     border-color: #28a745; 
   }
+ .c-klasa:nth-child(2) {
+    border-color: #ff66b3; 
+  }
   
