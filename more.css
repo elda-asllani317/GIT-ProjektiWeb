@@ -45,3 +45,12 @@ body {
     transform: rotate(-90deg); 
     white-space: nowrap; 
   }
+.c-klasa h2 {
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
