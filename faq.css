@@ -39,4 +39,8 @@ body {
     display: inline-flex;
     align-items: center;
   }
+.demo-section .demo-button:hover {
+    background-color: #e6f7fb;
+  }
+  
   
