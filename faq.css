@@ -26,4 +26,8 @@ body {
     margin: 5px 0 0;
     font-size: 0.9rem;
   }
+.demo-section .demo-button {
+    background-color: white;
+    color: #00bcd4;
+    font-size: 1rem;
   
