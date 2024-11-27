@@ -42,5 +42,8 @@ body {
 .demo-section .demo-button:hover {
     background-color: #e6f7fb;
   }
+.demo-section .demo-button::after {
+    content: "→";
+    margin-left: 10px;
   
   
