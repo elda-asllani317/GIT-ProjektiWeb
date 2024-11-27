@@ -62,4 +62,9 @@ body {
     text-align: left;
     padding-left: 25px;
   }
+.c-klasa ul li {
+    margin: 10px 0;
+    position: relative;
+  }
+  
   
