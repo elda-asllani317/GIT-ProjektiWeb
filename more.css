@@ -66,5 +66,10 @@ body {
     margin: 10px 0;
     position: relative;
   }
-  
+    .c-klasa ul li::before {
+    content: "✔";
+    color: #34a853;
+    position: absolute;
+    left: -20px;
+  }
   
