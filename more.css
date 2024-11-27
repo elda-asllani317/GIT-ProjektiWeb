@@ -31,4 +31,7 @@ body {
  .c-klasa:nth-child(2) {
     border-color: #ff66b3; 
   }
+.c-klasa:nth-child(3) {
+    border-color: #00bcd4; 
+  }
   
