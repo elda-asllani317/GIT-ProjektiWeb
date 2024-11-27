@@ -4,4 +4,10 @@ body {
     margin: 0;
     padding: 0;
   }
+  .s {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 50px 20px;
+  }
   
