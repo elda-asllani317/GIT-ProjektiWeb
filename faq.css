@@ -6,3 +6,9 @@ body {
     background-color: #f5f8fc;
     color: #333;
   }
+.demo-section {
+    background: linear-gradient(90deg, #3b3db4, #00bcd4);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
