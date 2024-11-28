@@ -96,4 +96,9 @@ body {
     list-style: none;
     padding: 0;
   }
+.lista ul li {
+    font-size: 1.2rem;
+    color: #3366cc;
+    margin: 10px 0;
+  }
   
