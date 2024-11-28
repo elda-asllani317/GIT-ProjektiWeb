@@ -58,5 +58,11 @@ body {
     font-size: 2rem;
     margin: 0;
   }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fc;
+    margin: 0;
+    padding: 0;
+  }
   
   
