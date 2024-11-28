@@ -64,5 +64,8 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+   .faq {
+    text-align: center;
+    padding: 30px;
+  }
   
