@@ -80,3 +80,8 @@ body {
     justify-content: center;
     gap: 30px;
   }
+
+  .ilustrimi {
+    flex: 1;
+    max-width: 300px;
+  }
