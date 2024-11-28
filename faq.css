@@ -85,3 +85,7 @@ body {
     flex: 1;
     max-width: 300px;
   }
+ .ilustrimi img {
+    width: 100%;
+  }
+  
