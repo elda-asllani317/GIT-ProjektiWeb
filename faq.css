@@ -68,4 +68,8 @@ body {
     text-align: center;
     padding: 30px;
   }
-  
+   .faq h1 {
+    font-size: 2rem;
+    color: #3366cc;
+    margin-bottom: 20px;
+  }
