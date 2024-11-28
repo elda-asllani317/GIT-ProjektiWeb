@@ -101,4 +101,11 @@ body {
     color: #3366cc;
     margin: 10px 0;
   }
+.lista ul li::before {
+    content: "▶";
+    color: #3366cc;
+    margin-right: 10px;
+  }
+  
+
   
