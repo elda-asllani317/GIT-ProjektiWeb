@@ -53,5 +53,10 @@ body {
     text-align: center;
     margin: 40px auto;
   }
+.faq-section h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin: 0;
+  }
   
   
