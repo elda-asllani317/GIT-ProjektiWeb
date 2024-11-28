@@ -92,4 +92,8 @@ body {
     flex: 2;
     text-align: left;
   }
+ .lista ul {
+    list-style: none;
+    padding: 0;
+  }
   
