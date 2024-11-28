@@ -73,3 +73,10 @@ body {
     color: #3366cc;
     margin-bottom: 20px;
   }
+.permbajtja {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
