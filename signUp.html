@@ -32,3 +32,50 @@
     </ul>
 
   </header>
+  
+<section class="contact">
+    <form id="multiStepForm">
+      <!-- First Step -->
+      <div class="form-step" id="step1">
+        <h2>Sign Up</h2>
+        <div class="inputGroup">
+          <input type="text" id="firstName" placeholder="First Name" maxlength="8" />
+          <div id="errorFirstName" class="error-message"></div>
+        </div>
+        <div class="inputGroup">
+          <input type="text" id="lastName" placeholder="Last Name" maxlength="8" />
+          <div id="errorLastName" class="error-message"></div>
+        </div>
+        <div class="form-buttons">
+          <button type="button" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+        <div class="form-step" id="step2" style="display: none;">
+        <div class="inputGroup">
+          <input type="email" id="email" placeholder="Email" />
+          <div id="errorEmail" class="error-message"></div>
+        </div>
+        <div class="inputGroup">
+          <input type="tel" id="phone" placeholder="Phone" />
+          <div id="errorPhone" class="error-message"></div>
+        </div>
+        <div class="inputGroup">
+          <textarea id="comment" placeholder="Comment" rows="4"></textarea>
+          <div id="errorComment" class="error-message"></div>
+        </div>
+        <div class="terms">
+          <input type="checkbox" id="termsCheck" />
+          <label for="termsCheck">Terms of service:<b>Agree</b></label>
+          <div id="errorTerms" class="error-message"></div>
+        </div>
+        <div class="form-buttons">
+          <button type="button" onclick="previousStep()">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </section>
+    <script src="javaScript/javaScript.js"></script>
+</body>
+</html>
+
