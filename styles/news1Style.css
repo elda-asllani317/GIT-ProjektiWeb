@@ -197,3 +197,33 @@ body {
   .formsFooter {
     padding-top: 40px;
   }
+  button {
+    background: rgb(63, 61, 98);
+    background: linear-gradient(
+      90deg,
+      rgba(63, 61, 98, 1) 0%,
+      rgba(49, 49, 219, 1) 46%,
+      rgba(0, 194, 233, 1) 100%
+    );
+    border: 2px solid #fff;
+    color: #ebebeb;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50px;
+    width: 140px;
+    height: 50px;
+    margin-left: 20px;
+  }
+  /* end footer */
+  
+  .checkInput {
+    color: #20509e;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
