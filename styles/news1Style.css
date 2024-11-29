@@ -125,3 +125,31 @@ body {
   a {
     text-decoration: none;
   }
+  
+  footer {
+    background-image: url(../wave.svg);
+    position: relative;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  footer .links {
+    display: flex;
+  }
+  
+  footer .row {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+  
+    align-items: flex-end;
+  }
+  footer .col,
+  footer .formsFooter {
+    margin: 10% 2% 10% 6%;
+  }
+  .col ul h1 {
+    text-align: center;
+  }
