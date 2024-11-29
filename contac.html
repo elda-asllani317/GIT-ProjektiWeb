@@ -173,4 +173,30 @@
       <div id="thankYouMessage" class="thank-you-message">Faleminderit për kontaktin tuaj!</div>
     </div>
   </div>
+      <script>
+    function nextSection() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+
+      if (firstName.length > 0 && firstName.length <= 8 && lastName.length > 0 && lastName.length <= 8) {
+        document.getElementById("errorFirstName").style.display = "none";
+        document.getElementById("errorLastName").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+      } else {
+        if (firstName.length === 0 || firstName.length > 8) {
+          document.getElementById("errorFirstName").style.display = "block";
+        } else {
+          document.getElementById("errorFirstName").style.display = "none";
+        }
+        if (lastName.length === 0 || lastName.length > 8) {
+          document.getElementById("errorLastName").style.display = "block";
+        } else {
+          document.getElementById("errorLastName").style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
 
