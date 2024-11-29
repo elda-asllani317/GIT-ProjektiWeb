@@ -266,3 +266,32 @@ body {
     #check:checked ~ ul {
       left: 0;
     }
+         footer .col img {
+      display: none;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+    }
+    footer .col {
+      padding-left: 23%;
+    }
+    footer .col ul {
+      margin: 0;
+      padding-left: 10px;
+    }
+    footer .formsFooter {
+      margin: 0% 6%;
+    }
+    footer .col {
+      margin: 0;
+    }
+    footer .row {
+      text-align: center;
+      display: block;
+      left: 20%;
+    }
+  
+    .formsFooter button {
+      margin: 0 auto;
+    }
