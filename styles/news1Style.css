@@ -41,3 +41,24 @@ body {
     text-decoration: none;
     color: #20509e;
   }
+  .activeHeader{
+    background: linear-gradient(
+      90deg,
+      rgba(63, 61, 98, 1) 0%,
+      rgba(49, 49, 219, 1) 46%,
+      rgba(0, 194, 233, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  .news {
+    margin: 15% 10% 3% 10%;
+  }
+  .news .title {
+    color: #20509e;
+  }
+  .news .title h1 {
+    font-size: 40px;
+  }
