@@ -180,3 +180,20 @@ body {
   .formsFooter {
     margin-right: 30px;
   }
+  .formsFooter input {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .formsFooter input[type="text"]::placeholder {
+    font-size: 15px;
+  }
+  .formsFooter input {
+    width: 300px;
+    height: 40px;
+    border: 2px solid #20509e;
+    border-radius: 20px;
+  }
+  .formsFooter {
+    padding-top: 40px;
+  }
