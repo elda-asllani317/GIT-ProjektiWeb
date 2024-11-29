@@ -255,3 +255,14 @@ body {
       text-align: center;
       transition: all 0.5s;
     }
+         header ul li {
+      display: block;
+      margin-top: 15%;
+      font-size: 25px;
+    }
+    header ul li a {
+      margin-top: 25%;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
