@@ -90,3 +90,25 @@ body {
     border-radius: 10px;
     border: 2px solid #bdb5b5;
   }
+  .news .col h5 {
+    color: grey;
+  }
+  .news .col p {
+    font-size: 30px;
+    /* width: 60%; */
+    margin: 0 auto;
+    padding: 0;
+    color: #20509e;
+  }
+  .pages {
+    text-align: center;
+    margin-top: 10%;
+  }
+  .pages a {
+    color: #20509e;
+    text-decoration: none;
+    border: 2px solid #20509e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 5%;
+  }
