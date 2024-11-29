@@ -26,3 +26,18 @@ body {
   header ul {
     display: flex;
   }
+  header ul li {
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+    justify-self: center;
+    font-size: 18px;
+  }
+  header img {
+    padding-left: 40px;
+    width: 160px;
+  }
+  header ul li a {
+    text-decoration: none;
+    color: #20509e;
+  }
