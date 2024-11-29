@@ -62,3 +62,31 @@ body {
   .news .title h1 {
     font-size: 40px;
   }
+  .news .companyNews img {
+    width: 100%;
+    margin-top: 30px;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid #bdb5b5;
+  }
+  .news .companyNews {
+    display: flex;
+    align-items: center;
+  }
+  .news .companyNews p {
+    font-size: 50px;
+    color: #20509e;
+    padding-left: 40px;
+  }
+  
+  .news .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    column-gap: 30px;
+  }
+  .news .col img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #bdb5b5;
+  }
