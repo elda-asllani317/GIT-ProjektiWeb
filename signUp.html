@@ -50,3 +50,28 @@
           <button type="button" onclick="nextStep()">Next</button>
         </div>
       </div>
+        <div class="form-step" id="step2" style="display: none;">
+        <div class="inputGroup">
+          <input type="email" id="email" placeholder="Email" />
+          <div id="errorEmail" class="error-message"></div>
+        </div>
+        <div class="inputGroup">
+          <input type="tel" id="phone" placeholder="Phone" />
+          <div id="errorPhone" class="error-message"></div>
+        </div>
+        <div class="inputGroup">
+          <textarea id="comment" placeholder="Comment" rows="4"></textarea>
+          <div id="errorComment" class="error-message"></div>
+        </div>
+        <div class="terms">
+          <input type="checkbox" id="termsCheck" />
+          <label for="termsCheck">Terms of service:<b>Agree</b></label>
+          <div id="errorTerms" class="error-message"></div>
+        </div>
+        <div class="form-buttons">
+          <button type="button" onclick="previousStep()">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </section>
