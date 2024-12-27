@@ -27,8 +27,9 @@ function nextStep() {
     document.getElementById('errorTerms').textContent = '';
   }
   
-  document.getElementById('multiStepForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  document.getElementById('multiStepForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+  
     clearErrors();
   
     let email = document.getElementById('email').value;
@@ -36,6 +37,7 @@ function nextStep() {
     let comment = document.getElementById('comment').value;
     let termsCheck = document.getElementById('termsCheck').checked;
   
+    // Validate form inputs
     if (!email || !phone || !comment || !termsCheck) {
       if (!email) document.getElementById('errorEmail').textContent = "Email is required.";
       if (!phone) document.getElementById('errorPhone').textContent = "Phone is required.";
@@ -44,8 +46,7 @@ function nextStep() {
       return;
     }
   
-    alert("Form submitted successfully!");
-    document.getElementById('multiStepForm').reset();
-    document.getElementById('step1').style.display = 'block';
-    document.getElementById('step2').style.display = 'none';
+    // Navigate to demo page
+    window.location.href = "getDemo.html"; 
   });
+  

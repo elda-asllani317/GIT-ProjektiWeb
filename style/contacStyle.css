@@ -104,6 +104,9 @@
   .secondInput {
     display: none;
   }
+  .contact{
+    margin-top: 200px;
+  }
   
   @media (max-width: 600px) {
     .contact {
