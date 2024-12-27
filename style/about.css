@@ -13,6 +13,9 @@ body {
     align-items: center;
     z-index: 1;
   }
+  header{
+    background-color: white;
+  }
   header ul {
     display: flex;
   }

@@ -5,6 +5,9 @@ body {
     background-color: #f5f5f5;
   }
   
+  header{
+    background-color: white;
+  }
   h2 {
     text-align: center;
     color: #0044b1;
