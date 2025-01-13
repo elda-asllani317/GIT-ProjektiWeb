@@ -1,9 +1,8 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
-    echo "hello";
+if (!$_SERVER["REQUEST_METHOD"]!=="POST") {
+    echo "bo";
 }else {
-    echo "fail";
-    // header("Location: ./signUp.html");
-    // die();
+    header("Location: ./signUp.html");
+    die();
 }
