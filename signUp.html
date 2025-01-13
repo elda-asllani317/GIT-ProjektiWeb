@@ -34,8 +34,8 @@
     </ul>
 
   </header>
-  
 
+<form  action="php/conection.php"  method="post">
     <section class="contact">
       <h2>Sign Up</h2>
       <form id="signUpForm">
@@ -52,8 +52,8 @@
           <div id="errorEmail" class="error-message"></div>
         </div>
         <div class="inputGroup">
-          <input type="tel" id="phone" placeholder="Phone" />
-          <div id="errorPhone" class="error-message"></div>
+          <input type="password" id="pasi" placeholder="Password" />
+          <div id="errorPassword" class="error-message"></div>
         </div>
         <div class="inputGroup">
           <label for="photo">Upload Photo (JPEG, PNG only):</label>
@@ -66,10 +66,11 @@
           <div id="errorTerms" class="error-message"></div>
         </div>
         <div class="form-buttons">
-          <button type="submit">Submit</button>
+          <button  id="signUpForm" type="submit">Submit</button>
         </div>
       </form>
     </section>
+  </form>
     <script src="javaScript/javaScript.js"></script>
 </body>
 </html>
