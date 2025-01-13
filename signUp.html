@@ -35,11 +35,10 @@
 
   </header>
   
-<section class="contact" >
-    <form id="multiStepForm">
-      <!-- First Step -->
-      <div class="form-step" id="step1">
-        <h2>Sign Up</h2>
+
+    <section class="contact">
+      <h2>Sign Up</h2>
+      <form id="signUpForm">
         <div class="inputGroup">
           <input type="text" id="firstName" placeholder="First Name" maxlength="8" />
           <div id="errorFirstName" class="error-message"></div>
@@ -48,11 +47,6 @@
           <input type="text" id="lastName" placeholder="Last Name" maxlength="8" />
           <div id="errorLastName" class="error-message"></div>
         </div>
-        <div class="form-buttons">
-          <button type="button" onclick="nextStep()">Next</button>
-        </div>
-      </div>
-        <div class="form-step" id="step2" style="display: none;">
         <div class="inputGroup">
           <input type="email" id="email" placeholder="Email" />
           <div id="errorEmail" class="error-message"></div>
@@ -67,19 +61,14 @@
         </div>
         <div class="terms">
           <input type="checkbox" id="termsCheck" />
-          <label for="termsCheck">Terms of service</label>
+          <label for="termsCheck">I agree to the terms of service</label>
           <div id="errorTerms" class="error-message"></div>
         </div>
         <div class="form-buttons">
-          
-          <button type="button" onclick="previousStep()">Back</button>
-         
           <button type="submit">Submit</button>
-        
         </div>
-      </div>
-    </form>
-  </section>
+      </form>
+    </section>
     <script src="javaScript/javaScript.js"></script>
 </body>
 </html>

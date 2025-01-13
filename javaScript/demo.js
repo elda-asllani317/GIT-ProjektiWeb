@@ -57,7 +57,8 @@ function createTaskCard(taskName) {
                   <img src="image/4.jpg" alt="" />
                 </div>
                 <div class="icon">
-                  <i id="icon" class="fa-solid fa-message"></i>
+                  
+          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
                 </div>
               </div>
   `;
