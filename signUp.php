@@ -33,12 +33,11 @@
       </li>
     </ul>
 
-  </header>
-
-<form  action="php/signUp.php"  method="post">
-    <section class="contact">
+  </header>  
+    <sectiosn class="contact">
       <h2>Sign Up</h2>
       <form id="signUpForm">
+      
         <div class="inputGroup">
           <input type="text" id="firstName" placeholder="First Name" maxlength="8" />
           <div id="errorFirstName" class="error-message"></div>
@@ -70,7 +69,7 @@
         </div>
       </form>
     </section>
-  </form>
+
     <script src="javaScript/javaScript.js"></script>
 </body>
 </html>
