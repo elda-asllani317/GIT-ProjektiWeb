@@ -37,21 +37,21 @@
 
     <section class="contact">
       <h2>Sign Up</h2>
-      <form id="signUpForm" method="php/signUp.php" action="post">
+      <form id="signUpForm"  action="php/signUp.php" method="post" >
         <div class="inputGroup">
-          <input type="text" id="firstName" placeholder="First Name" maxlength="8" />
+          <input type="text"  name="firstName"    id="firstName" placeholder="First Name" maxlength="8" />
           <div id="errorFirstName" class="error-message"></div>
         </div>
         <div class="inputGroup">
-          <input type="text" id="lastName" placeholder="Last Name" maxlength="8" />
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="8" />
           <div id="errorLastName" class="error-message"></div>
         </div>
         <div class="inputGroup">
-          <input type="email" id="email" placeholder="Email" />
+          <input type="email" id="email" name="email" placeholder="Email" />
           <div id="errorEmail" class="error-message"></div>
         </div>
         <div class="inputGroup">
-          <input type="password" id="pasi" placeholder="Password" />
+          <input type="password" id="pasi"name="pasi" placeholder="Password" />
           <div id="errorPassword" class="error-message"></div>
         </div>
         <div class="inputGroup">
@@ -65,8 +65,9 @@
           <div id="errorTerms" class="error-message"></div>
         </div>
           <div class="form-buttons">
-           
+            <a href="getDemo.html">
             <button  id="signUpForm" type="submit">Submit</button>
+          </a>
         </div> 
        
       </form>
