@@ -1,14 +1,10 @@
 <?php
 session_start();
 
-require_once "php/signUp.php";
 // Check if an image was uploaded; otherwise, set a default image
 $uploadedPhoto = isset($_SESSION['uploadedPhoto']) ? $_SESSION['uploadedPhoto'] : 'default.png';
 $imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,6 +44,7 @@ $imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
       <li><a href="contac.html">Contact</a></li>
     </ul>
     <img class="acc" id="profile" src="<?php echo $imagePath; ?>" alt="Profile Image" />
+    
   </header>
 
 
@@ -460,5 +457,3 @@ $imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
   <script src="javaScript/demo.js"></script>
 </body>
 </html>
-
-

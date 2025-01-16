@@ -1,24 +1,27 @@
 <?php
-
+session_start();
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $firstname=$_POST["firstName"];
 $lastname=$_POST["lastName"];
 $email=$_POST["email"];
 $pasi=$_POST["pasi"];
-$photo=$_POST["photo"];
+// $photo=$_FILES["photo"];
 
 
 
 
-  // Handle file upload
-  if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0) {
-    $targetDir = "./image/"; // Directory to save uploaded files
-    $fileName = basename($_FILES["photo"]["name"]);
-    $targetFilePath = $targetDir . uniqid() . "_" . $fileName; // Unique filename
-    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-    $allowedTypes = ["jpg", "jpeg", "png", "gif"];
+  
+
 try {
     require_once "conection.php";
+
+  // Handle file upload  
+  $photoo=$_FILES["photo"]['name'];//name / emri origjinal i fileit
+  $extention=explode(".",$photoo);//e ndan prej . //psh profile.jpg => ["profile", "jpg"].
+  $newFileName=round(microtime(true)).'.'. end($extention);//uniqe file name 1672898456.jpg";
+  $uploadpath="images/" . $newFileName;
+  move_uploaded_file($_FILES['photo']["tmp_name"],$uploadpath);
+
 
      $sql="INSERT INTO users(username,lastname,email,password,photo_url)
      Values (:username,:lastname,:email,:password,:photo_url); ";
@@ -31,8 +34,16 @@ $st->bindParam(":username",$firstname);
 $st->bindParam(":lastname",$lastname);
 $st->bindParam(":email",$email);
 $st->bindParam(":password",$pasi);
-$st->bindParam(":photo_url",$photo);
+$st->bindParam(":photo_url",$newFileName);
 
+if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPath)) {
+    // Save the file name in the session
+    $_SESSION['uploadedPhoto'] = $newFileName;
+
+    // Redirect to the display page
+    header("Location: ../signUp.php");
+    exit();
+}
 
 $st->execute();//u submit user data
 $pdo=null;//me nal conection
@@ -46,6 +57,5 @@ die();//ose exit();
 }
 
 }else {
-    header("Location: ../signUp.html");
-
-}}
+    header("Location: ../signUp.php");
+}

@@ -4,7 +4,6 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
   event.preventDefault(); 
 
   clearErrors();
-
   let form = this;//qikjo nifarforme ju referohet formes//
   let formData = new FormData(form); // i collect datat qikjo//i mledh te dhenat prej formes si psh username="stina" e merr vleren "stina"
   let isValid = validateForm(formData);//ktu kqyren a jon mbush format
@@ -16,8 +15,9 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
       })
       .then(response => {//shkur e shqip nese kto tdhana jon coorecte ather qoje te faqja teter
           if (response.ok) {
-              window.location.href = './getDemo.html'; // qikjo e qet tjt faqe
-          } else {
+              window.location.href = './getDemo.php'; // qikjo e qet tjt faqe
+
+            } else {
               return response.text().then(error => { throw new Error(error); });
           }
       })
@@ -26,6 +26,7 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
       });
         document.getElementById('signUpForm').reset();
   }
+
 });
 
 function validateForm(formData) {
@@ -58,6 +59,11 @@ function validateForm(formData) {
 
   return isValid;
 }
+
+
+
+
+
 // document.getElementById('signUpForm').reset();
 function clearErrors() {
   document.querySelectorAll('.error-message').forEach(error => (error.textContent = ''));
