@@ -1,36 +1,64 @@
-document.getElementById('signUpForm').addEventListener('submit', function (event) {
- event.preventDefault(); // Prevent form submission for validation
 
-  clearErrors(); // Clear any previous error messages
+//hello
+document.getElementById('signUpForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
 
-  let firstName = document.getElementById('firstName').value;
-  let lastName = document.getElementById('lastName').value;
-  let email = document.getElementById('email').value;
-  let pasi = document.getElementById('pasi').value;
-  let photo = document.getElementById('photo').value;
-  let termsCheck = document.getElementById('termsCheck').checked;
+  clearErrors();
 
-  let isValid = true; 
+  let form = this;//qikjo nifarforme ju referohet formes//
+  let formData = new FormData(form); // i collect datat qikjo//i mledh te dhenat prej formes si psh username="stina" e merr vleren "stina"
+  let isValid = validateForm(formData);//ktu kqyren a jon mbush format
 
-  if (!firstName || !lastName || !email || !pasi || !photo || !termsCheck) {
-    isValid = false;
-  }
-
-  if (!firstName) document.getElementById('errorFirstName').textContent = "First Name is required.";
-  if (!lastName) document.getElementById('errorLastName').textContent = "Last Name is required.";
-  if (!email) document.getElementById('errorEmail').textContent = "Email is required.";
-  if (!pasi) document.getElementById('errorPassword').textContent = "Password is required.";
-  if (!photo) document.getElementById('errorPhoto').textContent = "Photo is required.";
-  if (!termsCheck) document.getElementById('errorTerms').textContent = "You must agree to the terms.";
-
-  if (isValid) {
-    document.getElementById('signUpForm').submit();
-    // document.getElementById('signUpForm').reset();
-  //  window.location.href="./get";
+  if (isValid) {//nese  te dhenat jan te vlershme
+      fetch(form.action, {//fetch dergon te dhena ne backEnd//form.action e percaktojn actioni te formulari
+          method: form.method,//metoda qe perdoret ne kete rast esht POST
+          body: formData//te dhenat te mbledhur prej formes
+      })
+      .then(response => {//shkur e shqip nese kto tdhana jon coorecte ather qoje te faqja teter
+          if (response.ok) {
+              window.location.href = './getDemo.html'; // qikjo e qet tjt faqe
+          } else {
+              return response.text().then(error => { throw new Error(error); });
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error.message);
+      });
+        document.getElementById('signUpForm').reset();
   }
 });
 
-// Clear error messages
+function validateForm(formData) {
+  let isValid = true;
+
+  if (!formData.get('firstName')) {
+      document.getElementById('errorFirstName').textContent = "First Name is required.";
+      isValid = false;
+  }
+  if (!formData.get('lastName')) {
+      document.getElementById('errorLastName').textContent = "Last Name is required.";
+      isValid = false;
+  }
+  if (!formData.get('email')) {
+      document.getElementById('errorEmail').textContent = "Email is required.";
+      isValid = false;
+  }
+  if (!formData.get('pasi')) {
+      document.getElementById('errorPassword').textContent = "Password is required.";
+      isValid = false;
+  }
+  if (!formData.get('photo')) {
+      document.getElementById('errorPhoto').textContent = "Photo is required.";
+      isValid = false;
+  }
+  if (!document.getElementById('termsCheck').checked) {
+      document.getElementById('errorTerms').textContent = "You must agree to the terms.";
+      isValid = false;
+  }
+
+  return isValid;
+}
+// document.getElementById('signUpForm').reset();
 function clearErrors() {
   document.querySelectorAll('.error-message').forEach(error => (error.textContent = ''));
 }
