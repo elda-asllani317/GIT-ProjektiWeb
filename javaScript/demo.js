@@ -99,6 +99,9 @@ kryhet.addEventListener('click', () => {
   console.log("Task added and modal closed");
   
 });
+function saveDates() {
+  localStorage.setItem("date", listContanier.innerHTML);
+}
 
 
 

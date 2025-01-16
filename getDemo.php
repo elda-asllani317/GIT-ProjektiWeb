@@ -65,9 +65,12 @@ $imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
     <div id="content">
       <span id="spani">X</span>
       <div class="main">
-        <input id="mainInput" type="text" placeholder="Write something" />
-        <button id="btn">Add daily routine</button>
-        <button id="kryhet">Regjistro</button>
+      
+        <form   action="php/task.php" method="post">
+        <input id="mainInput"  name="mainInput" type="text" placeholder="Write something" />
+        <button type="button"  id="btn">Add daily routine</button>
+        <button type="submit" id="kryhet">Regjistro</button>
+        </form>
       </div>
     </div>
   </div>
