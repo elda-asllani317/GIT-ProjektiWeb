@@ -1,66 +1,38 @@
 <?php
-
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
-$firstname=$_POST["firstName"];
-$lastname=$_POST["lastName"];
-$email=$_POST["email"];
-$pasi=$_POST["pasi"];
-  
-try {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    session_start();
     require_once "conection.php";
 
-  // Handle file upload  
-  $photoo=$_FILES["photo"]['name'];//name / emri origjinal i fileit
-  $extention=explode(".",$photoo);//e ndan prej . //psh profile.jpg => ["profile", "jpg"].
-  $newFileName=round(microtime(true)).'.'. end($extention);//uniqe file name 1672898456.jpg";
-  $uploadpath="images/" . $newFileName;
-  move_uploaded_file($_FILES['photo']["tmp_name"],$uploadpath);
+    $firstname = $_POST["firstName"];
+    $lastname = $_POST["lastName"];
+    $email = $_POST["email"];
 
+    
+    $pasi = password_hash($_POST["pasi"], PASSWORD_DEFAULT); // me hashu kishe pasin
+    $photoo = $_FILES['photo']['name']; // e nmarrum file
+    $extension = pathinfo($photoo, PATHINFO_EXTENSION); // me ja marr png e kto na vyn me i bashku me nr ne uploadPath
+    $newFileName = round(microtime(true)) . '.' . $extension; // me e bo me numra
+    $uploadPath = "./images/" . $newFileName; //krejt path
 
-     $sql="INSERT INTO users(username,lastname,email,password,photo_url)
-     Values (:username,:lastname,:email,:password,:photo_url); ";
+    try {
+        $sql = "INSERT INTO users (username, lastname, email, password, photo_url) VALUES (:username, :lastname, :email, :password, :photo_url)";
+        $st = $pdo->prepare($sql);
+        $st->bindParam(":username", $firstname);
+        $st->bindParam(":lastname", $lastname);
+        $st->bindParam(":email", $email);
+        $st->bindParam(":password", $pasi);
+        $st->bindParam(":photo_url", $newFileName);
 
-
-
-
-$st=$pdo->prepare($sql);//statename
-$st->bindParam(":username",$firstname);
-$st->bindParam(":lastname",$lastname);
-$st->bindParam(":email",$email);
-$st->bindParam(":password",$pasi);
-$st->bindParam(":photo_url",$newFileName);
-$st->bindParam(":user_id",$newFileName);
-// session_start();
-// $_SESSION['newUserId'] = $pdo->lastInsertId();
-
-
-if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPath)) {
-    // Save the file name in the session
-    $_SESSION['uploadedPhoto'] = $newFileName;
-
-    // Redirect to the display page
-    header("Location: ../signUp.php");
-    exit();
-}
-
-
-
-$st->execute();//u submit user data
-$pdo=null;//me nal conection
-$st=null;//me nal conection
-die();//ose exit();
-
-if (basename($_SERVER["SCRIPT_FILENAME"]) == "signUp.php") {
-    header("Location: ../signUp.html");
-    exit();
-}
-
-} catch (PDOException $e) {
-    die("Fail " .$e->getMessage());
-}
-
-}else {
-    if (basename($_SERVER["SCRIPT_FILENAME"]) == "signUp.php") {
-        header("Location: ../signUp.php");
-        exit();}
+        // FOTOJA
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPath)) {
+            $st->execute(); //datat mu ru ne databaz
+            $_SESSION['uploadedPhoto'] = $newFileName; // Sme e shti foton ne session
+            header("Location: ../getDemo.php"); // me e qu te getDemo
+            exit();
+        } else {
+            throw new Exception("Failed to upload the file.");
+        }
+    } catch (Exception $e) {
+        die("Error: " . $e->getMessage());
+    }
 }

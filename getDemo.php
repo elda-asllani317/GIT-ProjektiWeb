@@ -1,9 +1,11 @@
 <?php
 session_start();
 
-// Check if an image was uploaded; otherwise, set a default image
-$uploadedPhoto = isset($_SESSION['uploadedPhoto']) ? $_SESSION['uploadedPhoto'] : 'default.png';
-$imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
+//kqyre a esht
+$uploadedPhoto = isset($_SESSION['uploadedPhoto']) 
+    ? "./php/images/" . $_SESSION['uploadedPhoto'] //boje bashk foton e sesionit me linkun
+    : null; // qe jo null 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +45,12 @@ $imagePath = "./php/images/" . $uploadedPhoto; // Path to the uploaded image
       <li><a href="cmimore.html">Pricing</a></li>
       <li><a href="contac.html">Contact</a></li>
     </ul>
-    <img class="acc" id="profile" src="<?php echo $imagePath; ?>" alt="Profile Image" />
+    <?php if ($uploadedPhoto): ?>
+        <!-- Display the uploaded image -->
+        <img src="<?php echo htmlspecialchars($uploadedPhoto); ?>" class="acc" alt="Uploaded Photo" >
+    <?php else: ?>
+        <p>No photo uploaded!</p>
+    <?php endif; ?>
     
   </header>
 
