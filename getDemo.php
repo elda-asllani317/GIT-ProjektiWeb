@@ -112,9 +112,7 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/1.jpg" alt="" />
           <img src="image/2.jpg" alt="" />
         </div>
-        <div class="icon">
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
-        </div>
+        
       </div>
     </div>
   </a>
@@ -137,10 +135,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
         <div class="avatar">
           <img src="image/3.jpg" alt="" />
           <img src="image/2.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -167,10 +161,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/1.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
           <img src="image/4.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -200,10 +190,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/2.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
           <img src="image/4.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -242,10 +228,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/2.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
         </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
-        </div>
       </div>
     </div>
   </a>
@@ -271,10 +253,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/4.jpg" alt="" />
           <img src="image/1.jpg" alt="" />
         </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
-        </div>
       </div>
     </div>
   </a>
@@ -297,10 +275,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
         <div class="avatar">
           <img src="image/1.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -327,10 +301,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/2.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
           <img src="image/4.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -365,10 +335,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/3.jpg" alt="" />
           <img src="image/1.jpg" alt="" />
         </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
-        </div>
       </div>
     </div>
   </a>
@@ -391,10 +357,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
         <div class="avatar">
           <img src="image/1.jpg" alt="" />
           <img src="image/4.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
@@ -422,10 +384,10 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/3.jpg" alt="" />
           <img src="image/1.jpg" alt="" />
         </div>
-        <div class="icon">
+        <!-- <div class="icon">
           
           <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
-        </div>
+        </div> -->
       </div>
     </div>
   </a>
@@ -454,10 +416,6 @@ $uploadedPhoto = isset($_SESSION['uploadedPhoto'])
           <img src="image/2.jpg" alt="" />
           <img src="image/3.jpg" alt="" />
           <img src="image/4.jpg" alt="" />
-        </div>
-        <div class="icon">
-          
-          <button id="phpButon"><i class="fa-solid fa-plus"></i></i></button>
         </div>
       </div>
     </div>
