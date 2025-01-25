@@ -54,3 +54,19 @@ $result = $conn->query($sql);
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .actions a {
+            margin-right: 10px;
+        }
+
+        .actions a:nth-child(1) {
+            color: #28a745;
+        }
+
+        .actions a:nth-child(2) {
+            color: #dc3545;
+        }
+    </style>
