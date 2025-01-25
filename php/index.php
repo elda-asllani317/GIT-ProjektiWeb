@@ -87,3 +87,17 @@ $result = $conn->query($sql);
         </tr>
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
+        <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['plan_name']; ?></td>
+            <td><?php echo $row['description']; ?></td>
+            <td><?php echo $row['price']; ?></td>
+            <td><?php echo $row['features']; ?></td>
+            <td class="actions">
+                <a href="update.php?id=<?php echo $row['id']; ?>">Edit</a>
+                <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+</body>
+</html>
