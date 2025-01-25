@@ -70,3 +70,20 @@ $result = $conn->query($sql);
             color: #dc3545;
         }
     </style>
+    </head>
+<body>
+    <h1>Pricing Plans</h1>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="create.php" style="padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px;">Add New Plan</a>
+    </div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Plan Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Features</th>
+            <th>Actions</th>
+        </tr>
+        <?php while ($row = $result->fetch_assoc()): ?>
+        <tr>
