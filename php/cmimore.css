@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .c-karta {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .c-tabela {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  
+  .c-klasa {
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  }
+  
+  .c-klasa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .c-klasa.free {
+    border-color: #28a745;
+  }
+  
+  .c-klasa.unlimited {
+    border-color: #ff69b4;
+  }
+  
+  .c-klasa.business {
+    border-color: #17a2b8;
+  }
+  
+  .c-klasa.business-plus {
+    border-color: #6f42c1;
+  }
+  
+  .c-klasa.enterprise {
+    border-color: #343a40;
+  }
+  
+ 
+  .c-klasa h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .c-klasa.free h3 {
+    color: #28a745; 
+  }
+  
+  .c-klasa.unlimited h3 {
+    color: #ff69b4; 
+  }
+  
+  .c-klasa.business h3 {
+    color: #17a2b8; 
+  }
+  
+  .c-klasa.business-plus h3 {
+    color: #6f42c1; 
+  }
+  
+  .c-klasa.enterprise h3 {
+    color: #343a40; 
+  }
+  
+  
+  .c-klasa h2 {
+    font-size: 32px;
+    margin: 10px 0;
+  }
+  
+ 
+  .c-klasa.free h2 {
+    color: #28a745; 
+  }
+  
+  .c-klasa.unlimited h2 {
+    color: #ff69b4; 
+  }
+  
+  .c-klasa.business h2 {
+    color: #17a2b8; 
+  }
+  
+  .c-klasa.business-plus h2 {
+    color: #6f42c1; 
+  }
+  
+  .c-klasa.enterprise h2 {
+    color: #343a40; 
+  }
+  
+
+  .c-klasa p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+ 
+  .c-klasa ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .c-klasa ul li {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .c-klasa ul li:before {
+    content: "✔";
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+
+  .c-klasa.free ul li:before {
+    color: #28a745;
+  }
+  
+  .c-klasa.unlimited ul li:before {
+    color: #ff69b4;
+  }
+  
+  .pricing-card.business ul li:before {
+    color: #17a2b8;
+  }
+  
+  .c-klasa.business-plus ul li:before {
+    color: #6f42c1;
+  }
+  
+  .c-klasa.enterprise ul li:before {
+    color: #343a40;
+  }
+  
+
+  .c-klasa button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .c-klasa button:hover {
+    transform: scale(1.05);
+  }
+  
+  .c-klasa.free button {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .c-klasa.free button:hover {
+    background: #218838;
+  }
+  
+  .c-klasa.unlimited button {
+    background: #ff69b4;
+    color: #fff;
+  }
+  
+  .c-klasa.unlimited button:hover {
+    background: #d13585;
+  }
+  
+  .c-klasa.business button {
+    background: #17a2b8;
+    color: #fff;
+  }
+  
+  .c-klasa.business button:hover {
+    background: #117a8b;
+  }
+  
+  .c-klasa.business-plus button {
+    background: #6f42c1;
+    color: #fff;
+  }
+  
+  .c-klasa.business-plus button:hover {
+    background: #59309f;
+  }
+  
+  .c-klasa.enterprise button {
+    background: #343a40;
+    color: #fff;
+  }
+  
+  .c-klasa.enterprise button:hover {
+    background: #23272b;
+  }
+  

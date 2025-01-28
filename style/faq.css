@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f8fc;
+    color: #333;
+  }
+.demo-section {
+    background: linear-gradient(90deg, #3b3db4, #00bcd4);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+.demo-section .demo-text h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+.demo-section .demo-text p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+  }
+.demo-section .demo-button {
+    background-color: white;
+    color: #00bcd4;
+    font-size: 1rem;
+      font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+     cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+.demo-section .demo-button:hover {
+    background-color: #e6f7fb;
+  }
+.demo-section .demo-button::after {
+    content: "→";
+    margin-left: 10px;
+      font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .faq-section {
+    text-align: center;
+    margin: 40px auto;
+  }
+.faq-section h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin: 0;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fc;
+    margin: 0;
+    padding: 0;
+  }
+   .faq {
+    text-align: center;
+    padding: 30px;
+  }
+   .faq h1 {
+    font-size: 2rem;
+    color: #3366cc;
+    margin-bottom: 20px;
+  }
+.permbajtja {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .ilustrimi {
+    flex: 1;
+    max-width: 300px;
+  }
+ .ilustrimi img {
+    width: 100%;
+  }
+.lista {
+    flex: 2;
+    text-align: left;
+  }
+ .lista ul {
+    list-style: none;
+    padding: 0;
+  }
+.lista ul li {
+    font-size: 1.2rem;
+    color: #3366cc;
+    margin: 10px 0;
+  }
+.lista ul li::before {
+    content: "▶";
+    color: #3366cc;
+    margin-right: 10px;
+  }
+  
+
+  
