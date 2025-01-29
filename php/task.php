@@ -1,28 +1,18 @@
 <?php
-
+// Kontrollo nëse të dhënat janë pranuar
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$mainInput=$_POST["mainInput"];
-
-
-   try {
-require_once "conection.php";
-
-    // Proceed with the task insertion
-    $sql = "INSERT INTO tasks (username) VALUES (:username)";
-    $st = $pdo->prepare($sql);
-    $st->bindParam(":username", $mainInput);
-
-    $st->execute();
-    $pdo=null;
-    $st=null;
-
-    header("Location: ../getDemo.php");
-    exit();
-   } catch (PDOException $e) {
-    die("Fail " .$e->getMessage());
-}
-
+    if (isset($_POST["mainInput"])) {
+        $task = $_POST["mainInput"];
+        
+        // Debugging
+        error_log("Task received: " . $task);
+        echo "Task received: " . $task;
+    } else {
+        error_log("No task received.");
+        echo "No task received.";
+    }
 } else {
-    header("Location: ../getDemo.php");
-    exit();
+    error_log("Invalid request method.");
+    echo "Invalid request method.";
 }
+?>
