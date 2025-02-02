@@ -40,7 +40,8 @@
         <p>Best for personal use</p>
         <h2>Free</h2>
         <p>FOREVER</p>
-         <a href="./iindex.php"><button>FREE FOREVER</button></a>
+        <a href="./clientRead.php"><button>FREE FOREVER</button></a>
+
         <ul>
           <li>100MB Storage</li>
           <li>Unlimited Tasks</li>
@@ -52,7 +53,7 @@
         <p>Best for small teams</p>
         <h2>$5</h2>
         <p>PER MEMBER PER MONTH</p>
-        <a href="./iindex.php">  <button>GET STARTED</button></a>
+       <a href="./clientRead.php"><button>GET STARTED</button></a>
 
         <ul>
           <li>Unlimited Storage</li>
@@ -65,7 +66,7 @@
         <p>Best for mid-sized teams</p>
         <h2>$12</h2>
         <p>PER MEMBER PER MONTH</p>
-        <a href="./iindex.php">  <button>GET STARTED</button></a>
+        <a href="./clientRead.php">  <button>GET STARTED</button></a>
 
         <ul>
           <li>Google SSO</li>
@@ -78,7 +79,7 @@
         <p>Best for multiple teams</p>
         <h2>$19</h2>
         <p>PER MEMBER PER MONTH</p>
-       <a href="./iindex.php">  <button>CONTACT SALES</button></a>
+       <a href="./clientRead.php">  <button>CONTACT SALES</button></a>
         <ul>
           <li>Team Sharing</li>
           <li>Unlimited Teams</li>
@@ -88,7 +89,7 @@
       <div class="c-klasa enterprise">
         <h3>ENTERPRISE</h3>
         <p>Best for many large teams</p>
-        <a href="./iindex.php">  <button>CONTACT SALES</button></a>
+        <a href="./ClientRead.php">  <button>CONTACT SALES</button></a>
 
         <ul>
           <li>White Labeling</li>
