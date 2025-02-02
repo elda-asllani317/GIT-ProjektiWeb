@@ -1,69 +1,152 @@
 <?php
+require_once 'db.php'; // Lidhja me databazën
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $plan_id = $_POST['plan_id'];
-    $plan_name = $_POST['plan_name'];
-    $price = $_POST['price'];
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $cardNumber = mysqli_real_escape_string($conn, $_POST['cardNumber']);
+    $expiryDate = mysqli_real_escape_string($conn, $_POST['expiryDate']);
+    $cvv = mysqli_real_escape_string($conn, $_POST['cvv']);
+    $plan_name = mysqli_real_escape_string($conn, $_POST['plan_name']);
+    $price = mysqli_real_escape_string($conn, $_POST['price']);
+
+    // Shto të dhënat në tabelën subscriptions
+    $sql = "INSERT INTO subscriptions (name, cardNumber, expiryDate, cvv) VALUES ('$name', '$cardNumber', '$expiryDate', '$cvv')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<h2>Payment Successful!</h2>";
+        echo "<p>Thank you for subscribing to <strong>$plan_name</strong> for <strong>\$$price</strong>.</p>";
+    } else {
+        echo "Error: " . $conn->error;
+    }
 } else {
-    // Nëse nuk ka të dhëna, ridrejto te faqja kryesore
-    header("Location: index.php");
-    exit();
+    echo "Invalid request!";
 }
+
+$conn->close();
 ?>
+<style>
+   /* Font i personalizuar dhe sfond modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        form {
-            background: white;
-            padding: 20px;
-            display: inline-block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        input, button {
-            margin: 10px 0;
-            padding: 10px;
-            width: 90%;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928DAB);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    <h2>Enter Payment Details</h2>
-    <p>You are subscribing to: <strong><?php echo htmlspecialchars($plan_name); ?></strong></p>
-    <p>Price: <strong>$<?php echo htmlspecialchars($price); ?></strong></p>
+/* Karta e pagesës me efekt Glassmorphism */
+.payment-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-    <form action="process_payment.php" method="POST">
-        <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
-        <input type="hidden" name="plan_name" value="<?php echo htmlspecialchars($plan_name); ?>">
-        <input type="hidden" name="price" value="<?php echo htmlspecialchars($price); ?>">
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
 
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="text" name="cardNumber" placeholder="Card Number" required>
-        <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" required>
-        <input type="text" name="cvv" placeholder="CVV" required>
+/* Titulli */
+h2 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
 
-        <button type="submit">Confirm Payment</button>
-    </form>
+/* Teksti */
+p {
+    color: #ddd;
+    font-size: 16px;
+    margin: 10px 0;
+}
 
-</body>
-</html>
+/* Forma e pagesës */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Input-et me dizajn të sofistikuar */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+}
+
+/* Butoni i pagesës */
+.payment-button {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.payment-button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: scale(1.05);
+}
+
+/* Butoni për kthim */
+.return-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.return-button:hover {
+    background: white;
+    color: #333;
+}
+
+/* Përgjigjshmëria për pajisje mobile */
+@media (max-width: 768px) {
+    .payment-card {
+        width: 90%;
+    }
+}
+
+</style>
+
+
+<a href="cmimore.php"><button class="return-button">Return</button></a>
