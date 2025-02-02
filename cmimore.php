@@ -130,7 +130,7 @@
   <?php
 require_once 'db.php';
 
-// Lexo të gjitha planet nga databaza
+// Lexo planet prej databaze
 $sql = "SELECT * FROM pricing_plans";
 $result = $conn->query($sql);
 ?>
@@ -200,7 +200,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<h1>Cmimore</h1>
+<h1>SUBSCRIPTION</h1>
 
 <div class="pricing-table">
     <?php while ($row = $result->fetch_assoc()): ?>
