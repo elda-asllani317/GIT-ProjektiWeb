@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php'; // Lidhja me databazën
+require_once 'db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $plan_name = mysqli_real_escape_string($conn, $_POST['plan_name']);
     $price = mysqli_real_escape_string($conn, $_POST['price']);
 
-    // Shto të dhënat në tabelën subscriptions
+    
     $sql = "INSERT INTO subscriptions (name, cardNumber, expiryDate, cvv) VALUES ('$name', '$cardNumber', '$expiryDate', '$cvv')";
 
     if ($conn->query($sql) === TRUE) {
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 <style>
-   /* Font i personalizuar dhe sfond modern */
+    
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -40,7 +40,6 @@ body {
     height: 100vh;
 }
 
-/* Karta e pagesës me efekt Glassmorphism */
 .payment-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -59,21 +58,18 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Titulli */
 h2 {
     color: #fff;
     font-size: 26px;
     font-weight: bold;
 }
 
-/* Teksti */
 p {
     color: #ddd;
     font-size: 16px;
     margin: 10px 0;
 }
 
-/* Forma e pagesës */
 .payment-form {
     display: flex;
     flex-direction: column;
@@ -81,7 +77,6 @@ p {
     margin-top: 20px;
 }
 
-/* Input-et me dizajn të sofistikuar */
 input {
     padding: 12px;
     font-size: 16px;
@@ -103,7 +98,6 @@ input:focus {
     border: 1px solid white;
 }
 
-/* Butoni i pagesës */
 .payment-button {
     background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
@@ -121,7 +115,6 @@ input:focus {
     transform: scale(1.05);
 }
 
-/* Butoni për kthim */
 .return-button {
     background: transparent;
     color: white;
@@ -139,7 +132,6 @@ input:focus {
     color: #333;
 }
 
-/* Përgjigjshmëria për pajisje mobile */
 @media (max-width: 768px) {
     .payment-card {
         width: 90%;
