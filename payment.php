@@ -64,6 +64,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Confirm Payment</button>
     </form>
+     <style>
+.return-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #007BFF; /* Blu elegante */
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.return-button:hover {
+    background: #0056b3; /* Ngjyrë më e errët kur vendos miun */
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.return-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .return-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+</style>
+<a href="cmimore.php"><button class="return-button">Return</button></a>
+
+
 
 </body>
 </html>
