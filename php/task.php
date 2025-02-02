@@ -1,18 +1,25 @@
 <?php
-// Kontrollo nëse të dhënat janë pranuar
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["mainInput"])) {
-        $task = $_POST["mainInput"];
-        
-        // Debugging
-        error_log("Task received: " . $task);
-        echo "Task received: " . $task;
-    } else {
-        error_log("No task received.");
-        echo "No task received.";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {  // Tani pranon vetëm POST requests
+    require_once "conection.php";
+
+    if (!isset($_POST["mainInput"]) || empty($_POST["mainInput"])) {
+        echo json_encode(["status" => "error", "message" => "Task name is missing"]);
+        exit();
+    }
+
+    $username = $_POST["mainInput"];
+
+    try {
+        $sql = "INSERT INTO tasks (username) VALUES (:username);";
+        $st = $pdo->prepare($sql);
+        $st->bindParam(":username", $username);
+        $st->execute();
+
+        echo json_encode(["status" => "success", "message" => "Task added successfully"]);
+    } catch (Exception $e) {
+        echo json_encode(["status" => "error", "message" => "Database error: " . $e->getMessage()]);
     }
 } else {
-    error_log("Invalid request method.");
-    echo "Invalid request method.";
+    echo json_encode(["status" => "error", "message" => "Invalid request method"]);
 }
 ?>

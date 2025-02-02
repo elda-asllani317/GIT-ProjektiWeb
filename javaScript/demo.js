@@ -64,6 +64,7 @@ function createTaskCard(taskName) {
   let edit = thisCard.querySelector(".edit");
   edit.addEventListener("click", () => {
     writeInput.value = taskName;
+    thisCard.remove();
     minipage.style.display = "block";
     console.log("Editing:", taskName);
   });
