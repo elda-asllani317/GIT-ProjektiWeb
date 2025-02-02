@@ -37,7 +37,7 @@ function validateForm(formData) {
       isValid = false;
   }
   if (!formData.get('lastName')) {
-      document.getElementById('errorLastName').textContent = "Last Name is required.";
+      document.getElementById('errorLastName').textContent = "Lasttt Name is required.";
       isValid = false;
   }
   if (!formData.get('email')) {

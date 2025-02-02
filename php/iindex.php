@@ -95,6 +95,7 @@ $result = $conn->query($sql);
             <td class="actions">
                 <a href="update.php?id=<?php echo $row['id']; ?>">Edit</a>
                 <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+                  <a href="readc.php?id=<?php echo $row['id']; ?>">Read</a>
             </td>
         </tr>
         <?php endwhile; ?>
