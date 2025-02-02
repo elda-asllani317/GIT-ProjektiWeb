@@ -32,7 +32,7 @@ function createTaskCard(taskName) {
       <h2>${taskName}</h2>
       <details>
         <summary> <i class="fa-solid fa-ellipsis-vertical"></i></summary>
-        <h4 class="edit"> <i class="fa-solid fa-plus"></i> Add task</h4>
+        <h4 class="edit"> <i class="fa-solid fa-pen-to-square"></i> Edit</h4>
         <h4> <i class="fa-solid fa-paperclip"></i> Attach</h4>
         <h4 class="deleteBtn"><i class="fa-solid fa-trash-can"></i> Delete</h4>
       </details>
