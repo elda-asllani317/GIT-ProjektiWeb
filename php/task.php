@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {  // Tani pranon vetëm POST requests
+if ($_SERVER["REQUEST_METHOD"] == "POST") {  
     require_once "conection.php";
 
     if (!isset($_POST["mainInput"]) || empty($_POST["mainInput"])) {
